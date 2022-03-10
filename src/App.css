@@ -38,8 +38,11 @@
 }
 
 .floc {
-  font-size: 30px;
+  font-size: 40px;
   position: fixed;
-  color: red;
+  color: white;
   top: 0%;
+}
+.fons {
+  width: 100%;
 }

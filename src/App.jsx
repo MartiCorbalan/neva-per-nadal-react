@@ -59,7 +59,6 @@ export default function App() {
       nouFloc(),
       nouFloc(),
       nouFloc(),
-      nouFloc(),
     ];
   }
 
@@ -95,6 +94,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <img src="navidad.jpg" alt="" className="fons" />
       <div className="Display">
         {flocs.map((floc) => (
           <>
