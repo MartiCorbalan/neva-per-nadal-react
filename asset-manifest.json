@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/neva-per-nadal-react/static/css/main.e4902890.css",
+    "main.js": "/neva-per-nadal-react/static/js/main.4cb525d4.js",
+    "index.html": "/neva-per-nadal-react/index.html",
+    "main.e4902890.css.map": "/neva-per-nadal-react/static/css/main.e4902890.css.map",
+    "main.4cb525d4.js.map": "/neva-per-nadal-react/static/js/main.4cb525d4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e4902890.css",
+    "static/js/main.4cb525d4.js"
+  ]
+}
