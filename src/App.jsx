@@ -1,11 +1,10 @@
 import "./App.css";
 import Floc from "./components/Floc";
 import { useState, useEffect } from "react";
-function App() {
-  /* let array = ["❄", "❄", "❄", "❄", "❄", "❄", "❄", "❄", "❄", "❄", "❄"]; */
 
-  let [flocs, setFlocs] = useState(crearFlocs());
+/* let array = ["❄", "❄", "❄", "❄", "❄", "❄", "❄", "❄", "❄", "❄", "❄"]; */
 
+export default function App() {
   function crearFlocs() {
     return [
       nouFloc(),
@@ -20,27 +19,89 @@ function App() {
       nouFloc(),
       nouFloc(),
       nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
+      nouFloc(),
     ];
   }
-  function nouFloc() {
-    return { x: -10, y: -10 };
-  }
 
-  setFlocs((tots) => moureFlocs(tots));
+  function nouFloc() {
+    return { x: Math.random() * 100 + 1, y: -10 };
+  }
 
   function moureFlocs(flocs) {
     return flocs.map((floc) => moureFloc(floc));
   }
 
   function moureFloc({ x, y }) {
-    return { x: x + 1, y: y + 1 };
+    if (y >= 100) {
+      return {
+        x: x + Math.random() * 1 - Math.random() * 1,
+        y: -10 + Math.random(),
+      };
+    } else {
+      return {
+        x: x + Math.random() * 1 - Math.random() * 1,
+        y: y + Math.random(),
+      };
+    }
   }
+
+  let [flocs, setFlocs] = useState(crearFlocs());
+
+  useEffect(() => {
+    setInterval(() => {
+      setFlocs((tots) => moureFlocs(tots));
+    }, 50);
+  }, []);
 
   return (
     <div className="App">
-      <Floc />
+      <div className="Display">
+        {flocs.map((floc) => (
+          <>
+            <Floc x={floc.x} y={floc.y} />
+          </>
+        ))}
+      </div>
     </div>
   );
 }
-
-export default App;
